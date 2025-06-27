@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "./unity-tokens.css";
+@import "./unity-tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -44,38 +46,38 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --radius: 0.25rem;
+  --background: var(--un-absolute-white);
+  --foreground: var(--un-brand-800);
+  --card: var(--un-absolute-white);
+  --card-foreground: var(--un-brand-800);
+  --popover: var(--un-absolute-white);
+  --popover-foreground: var(--un-brand-800);
+  --primary: var(--un-primary-600);
+  --primary-foreground: var(--un-absolute-white);
+  --secondary: var(--un-secondary-600);
+  --secondary-foreground: var(--un-absolute-white);
+  --muted: var(--un-absolute-white);
+  --muted-foreground: var(--un-neutral-800);
+  --accent: var(--un-absolute-white);
+  --accent-foreground: var(--un-primary-600);
+  --destructive: var(--un-error-600);
+  --border: var(--un-neutral-400);
+  --input: var(--un-neutral-400);
+  --ring: var(--un-primary-600);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: var(--un-absolute-white);
+  --sidebar-foreground: var(--un-brand-800);
+  --sidebar-primary: var(--un-primary-600);
+  --sidebar-primary-foreground: var(--un-absolute-white);
+  --sidebar-accent: var(--un-primary-100);
+  --sidebar-accent-foreground: var(--un-primary-600);
+  --sidebar-border: var(--un-neutral-400);
+  --sidebar-ring: var(--un-primary-600);
 }
 
 .dark {
@@ -119,4 +121,36 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer utilities {
+  :root {
+    --unity-grid-margin: var(--un-grid-space-margin-default);
+    /* --unity-grid-columns: var(--un-grid-columns-sm);
+    @media (min-width: 768px) and (max-width: 1023px) {
+      --unity-grid-columns: var(--un-grid-columns-md);
+    }
+    @media (min-width: 1024px) {
+      --unity-grid-columns: var(--un-grid-columns-lg);
+    } */
+
+    --z-above: 10;
+    --z-base: 100;
+    --z-header: var(--z-base);
+    --z-sidebar: var(--z-base);
+    --z-dropdown: calc(var(--z-above) + var(--z-header));
+    /* // Tooltip on Modal not showing due to lower z-index. But we cannot break the others value by moving Tooltip higher in z-index. So we're using z-modal for Tooltip component */
+    --z-tooltip: calc(var(--z-above) + var(--z-dropdown));
+    --z-backdrop: calc(var(--z-above) + var(--z-tooltip));
+    --z-toast: calc(var(--z-above) + var(--z-backdrop));
+    --z-modal: calc(var(--z-above) + var(--z-toast));
+  }
+
+  /* .page-margin {
+    @apply mx-(--unity-grid-margin);
+    @apply sm:mx-6;
+    @apply md:mx-8;
+    @apply lg:mx-12;
+    @apply xl:mx-16;
+  } */
 }

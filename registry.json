@@ -4,11 +4,24 @@
   "homepage": "https://github.com/michaelsawyers/m3",
   "items": [
     {
+      "name": "scaffold",
+      "type": "registry:component",
+      "title": "Scaffold",
+      "description": "A simple app layout scaffold",
+      "registryDependencies": ["ak-header", "ak-text-input"],
+      "files": [
+        {
+          "path": "registry/unity/blocks/scaffold.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "hello-world",
       "type": "registry:component",
       "title": "Hello World",
       "description": "A simple hello world component",
-      "registryDependencies": ["button"],
+      "registryDependencies": ["ak-button"],
       "files": [
         {
           "path": "registry/new-york/blocks/hello-world/hello-world.tsx",
@@ -22,7 +35,7 @@
       "title": "Example Form",
       "description": "A contact form with Zod validation.",
       "dependencies": ["zod"],
-      "registryDependencies": ["button", "input", "label", "textarea", "card"],
+      "registryDependencies": ["ak-button", "ak-text-input", "label", "ak-textarea", "ak-card"],
       "files": [
         {
           "path": "registry/new-york/blocks/example-form/example-form.tsx",
@@ -35,7 +48,7 @@
       "type": "registry:component",
       "title": "Complex Component",
       "description": "A complex component showing hooks, libs and components.",
-      "registryDependencies": ["card"],
+      "registryDependencies": ["ak-card"],
       "files": [
         {
           "path": "registry/new-york/blocks/complex-component/page.tsx",

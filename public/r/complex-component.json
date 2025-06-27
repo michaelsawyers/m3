@@ -5,7 +5,10 @@
   "title": "Complex Component",
   "description": "A complex component showing hooks, libs and components.",
   "registryDependencies": [
-    "card"
+    "ak-card"
+  ],
+  "dependencies": [
+    "@ariakit/react"
   ],
   "files": [
     {
@@ -16,7 +19,7 @@
     },
     {
       "path": "registry/new-york/blocks/complex-component/components/pokemon-card.tsx",
-      "content": "import { cache } from \"react\"\nimport { getPokemon } from \"@/registry/new-york/blocks/complex-component/lib/pokemon\"\nimport { Card, CardContent } from \"@/registry/new-york/ui/card\"\nimport { PokemonImage } from \"@/registry/new-york/blocks/complex-component/components/pokemon-image\"\n\nconst cachedGetPokemon = cache(getPokemon)\n\nexport async function PokemonCard({ name }: { name: string }) {\n  const pokemon = await cachedGetPokemon(name)\n\n  if (!pokemon) {\n    return null\n  }\n\n  return (\n    <Card>\n      <CardContent className=\"flex flex-col items-center p-2\">\n        <div>\n          <PokemonImage name={pokemon.name} number={pokemon.id} />\n        </div>\n        <div className=\"text-center font-medium\">{pokemon.name}</div>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "content": "import { cache } from \"react\";\nimport { getPokemon } from \"@/registry/new-york/blocks/complex-component/lib/pokemon\";\nimport { AkCard, AkCardContent } from \"@/registry/unity/ui/ak-card\";\nimport { PokemonImage } from \"@/registry/new-york/blocks/complex-component/components/pokemon-image\";\n\nconst cachedGetPokemon = cache(getPokemon);\n\nexport async function PokemonCard({ name }: { name: string }) {\n  const pokemon = await cachedGetPokemon(name);\n\n  if (!pokemon) {\n    return null;\n  }\n\n  return (\n    <AkCard>\n      <AkCardContent className=\"flex flex-col items-center p-2\">\n        <div>\n          <PokemonImage name={pokemon.name} number={pokemon.id} />\n        </div>\n        <div className=\"text-center font-medium\">{pokemon.name}</div>\n      </AkCardContent>\n    </AkCard>\n  );\n}\n",
       "type": "registry:component"
     },
     {

@@ -12,6 +12,9 @@ importers:
 
   .:
     dependencies:
+      '@ariakit/react':
+        specifier: ^0.4.17
+        version: 0.4.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@radix-ui/react-label':
         specifier: ^2.1.4
         version: 2.1.4(@types/react-dom@19.1.2(@types/react@19.1.2))(@types/react@19.1.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -90,6 +93,21 @@ packages:
   '@antfu/ni@23.3.1':
     resolution: {integrity: sha512-C90iyzm/jLV7Lomv2UzwWUzRv9WZr1oRsFRKsX5HjQL4EXrbi9H/RtBkjCP+NF+ABZXUKpAa4F1dkoTaea4zHg==}
     hasBin: true
+
+  '@ariakit/core@0.4.15':
+    resolution: {integrity: sha512-vvxmZvkNhiisKM+Y1TbGMUfVVchV/sWu9F0xw0RYADXcimWPK31dd9JnIZs/OQ5pwAryAHmERHwuGQVESkSjwQ==}
+
+  '@ariakit/react-core@0.4.17':
+    resolution: {integrity: sha512-kFF6n+gC/5CRQIyaMTFoBPio2xUe0k9rZhMNdUobWRmc/twfeLVkODx+8UVYaNyKilTge8G0JFqwvFKku/jKEw==}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
+
+  '@ariakit/react@0.4.17':
+    resolution: {integrity: sha512-HQaIboE2axtlncJz1hRTaiQfJ1GGjhdtNcAnPwdjvl2RybfmlHowIB+HTVBp36LzroKPs/M4hPCxk7XTaqRZGg==}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
 
   '@babel/code-frame@7.26.2':
     resolution: {integrity: sha512-RJlIHRueQgwWitWgF8OdFYGZX328Ax5BCemNGlqHfplnRT9ESi8JkFlvaVYbS+UubVY6dpv87Fs2u5M29iNFVQ==}
@@ -257,6 +275,15 @@ packages:
   '@eslint/plugin-kit@0.2.8':
     resolution: {integrity: sha512-ZAoA40rNMPwSm+AeHpCq8STiNAwzWLJuP8Xv4CHIc9wv/PSuExjMrmjfYNj682vW0OOiZ1HKxzvjQr9XZIisQA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@floating-ui/core@1.7.1':
+    resolution: {integrity: sha512-azI0DrjMMfIug/ExbBaeDVJXcY0a7EPvPjb2xAJPa4HeimBX+Z18HK8QQR3jb6356SnDDdxx+hinMLcJEDdOjw==}
+
+  '@floating-ui/dom@1.7.1':
+    resolution: {integrity: sha512-cwsmW/zyw5ltYTUeeYJ60CnQuPqmGwuGVhG9w0PRaRKkAyi38BT5CKrpIbb+jtahSwUl04cWzSx9ZOIxeS6RsQ==}
+
+  '@floating-ui/utils@0.2.9':
+    resolution: {integrity: sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -2392,6 +2419,11 @@ packages:
   url-parse@1.5.10:
     resolution: {integrity: sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==}
 
+  use-sync-external-store@1.5.0:
+    resolution: {integrity: sha512-Rb46I4cGGVBmjamjphe8L/UnvJD+uPPtTkNvX5mZgqdbavhI4EbgIWJiIHXJ8bc/i9EQGPRh4DwEURJ552Do0A==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
@@ -2471,6 +2503,22 @@ snapshots:
       '@jridgewell/trace-mapping': 0.3.25
 
   '@antfu/ni@23.3.1': {}
+
+  '@ariakit/core@0.4.15': {}
+
+  '@ariakit/react-core@0.4.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+    dependencies:
+      '@ariakit/core': 0.4.15
+      '@floating-ui/dom': 1.7.1
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+      use-sync-external-store: 1.5.0(react@19.1.0)
+
+  '@ariakit/react@0.4.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+    dependencies:
+      '@ariakit/react-core': 0.4.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
 
   '@babel/code-frame@7.26.2':
     dependencies:
@@ -2708,6 +2756,17 @@ snapshots:
     dependencies:
       '@eslint/core': 0.13.0
       levn: 0.4.1
+
+  '@floating-ui/core@1.7.1':
+    dependencies:
+      '@floating-ui/utils': 0.2.9
+
+  '@floating-ui/dom@1.7.1':
+    dependencies:
+      '@floating-ui/core': 1.7.1
+      '@floating-ui/utils': 0.2.9
+
+  '@floating-ui/utils@0.2.9': {}
 
   '@humanfs/core@0.19.1': {}
 
@@ -5008,6 +5067,10 @@ snapshots:
     dependencies:
       querystringify: 2.2.0
       requires-port: 1.0.0
+
+  use-sync-external-store@1.5.0(react@19.1.0):
+    dependencies:
+      react: 19.1.0
 
   util-deprecate@1.0.2: {}
 

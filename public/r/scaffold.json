@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scaffold",
+  "type": "registry:component",
+  "title": "Scaffold",
+  "description": "A simple app layout scaffold",
+  "registryDependencies": [
+    "ak-header",
+    "ak-text-input"
+  ],
+  "files": [
+    {
+      "path": "registry/unity/blocks/scaffold.tsx",
+      "content": "import { AkHeader } from \"../ui/ak-header\";\nimport { AkTextInput } from \"../ui/ak-text-input\";\n\nexport function Scaffold(props: React.ComponentProps<\"div\">) {\n  return (\n    <div {...props}>\n      <AkHeader className=\"flex justify-between\">\n        <h1>AbbVie</h1>\n        <AkTextInput placeholder=\"Search\" />\n      </AkHeader>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

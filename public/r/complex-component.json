@@ -7,9 +7,6 @@
   "registryDependencies": [
     "ak-card"
   ],
-  "dependencies": [
-    "@ariakit/react"
-  ],
   "files": [
     {
       "path": "registry/new-york/blocks/complex-component/page.tsx",

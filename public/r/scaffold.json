@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "registry/unity/blocks/scaffold.tsx",
-      "content": "import { AkHeader } from \"../ui/ak-header\";\nimport { AkTextInput } from \"../ui/ak-text-input\";\n\nexport function Scaffold(props: React.ComponentProps<\"div\">) {\n  return (\n    <div {...props}>\n      <AkHeader className=\"flex justify-between\">\n        <h1>AbbVie</h1>\n        <AkTextInput placeholder=\"Search\" />\n      </AkHeader>\n    </div>\n  );\n}\n",
+      "content": "import { AkHeader } from \"../ui/ak-header\";\nimport { AkTextInput } from \"../ui/ak-text-input\";\n\nexport function Scaffold(props: React.ComponentProps<\"div\">) {\n  return (\n    <div className=\"w-full\" {...props}>\n      <AkHeader className=\"flex justify-between sticky top-0\">\n        <h1 className=\"text-h2 font-secondary\">AbbVie</h1>\n        <AkTextInput placeholder=\"Search\" className=\"w-52\" />\n      </AkHeader>\n    </div>\n  );\n}\n",
       "type": "registry:component"
     }
   ]

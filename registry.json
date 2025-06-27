@@ -4,6 +4,84 @@
   "homepage": "https://github.com/michaelsawyers/m3",
   "items": [
     {
+      "name": "ak-header",
+      "type": "registry:component",
+      "title": "AkHeader",
+      "description": "A header component using Ariakit",
+      "dependencies": ["@ariakit/react"],
+      "files": [
+        {
+          "path": "registry/unity/ui/ak-header.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "ak-button",
+      "type": "registry:component",
+      "title": "AkButton",
+      "description": "A button component using Ariakit",
+      "dependencies": ["@ariakit/react", "class-variance-authority"],
+      "files": [
+        {
+          "path": "registry/unity/ui/ak-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "ak-card",
+      "type": "registry:component",
+      "title": "AkCard",
+      "description": "A card component using Ariakit",
+      "dependencies": ["@ariakit/react"],
+      "files": [
+        {
+          "path": "registry/unity/ui/ak-card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "ak-text-input",
+      "type": "registry:component",
+      "title": "AkTextInput",
+      "description": "A text input component using Ariakit",
+      "dependencies": ["@ariakit/react"],
+      "files": [
+        {
+          "path": "registry/unity/ui/ak-text-input.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "ak-textarea",
+      "type": "registry:component",
+      "title": "AkTextarea",
+      "description": "A textarea component using Ariakit",
+      "dependencies": ["@ariakit/react"],
+      "files": [
+        {
+          "path": "registry/unity/ui/ak-textarea.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:component",
+      "title": "Label",
+      "description": "A label component using Radix UI",
+      "dependencies": ["@radix-ui/react-label"],
+      "files": [
+        {
+          "path": "registry/new-york/ui/label.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "scaffold",
       "type": "registry:component",
       "title": "Scaffold",

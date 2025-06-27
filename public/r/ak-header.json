@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ak-header",
+  "type": "registry:component",
+  "title": "AkHeader",
+  "description": "A header component using Ariakit",
+  "dependencies": [
+    "@ariakit/react"
+  ],
+  "files": [
+    {
+      "path": "registry/unity/ui/ak-header.tsx",
+      "content": "import { Toolbar } from \"@ariakit/react\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction AkHeader({\n  className,\n  children,\n  ...props\n}: React.ComponentProps<\"header\">) {\n  return (\n    <header\n      className={cn(\n        \"flex justify-center items-center w-full box-border flex-shrink-0 z-(--z-header) bg-(--un-header-footer-background-color) border-b-(length:--un-header-footer-border-width) border-solid border-(--un-header-footer-border-color) text-(--un-header-footer-color)\",\n        className\n      )}\n      {...props}\n    >\n      <Toolbar\n        className={cn(\n          \"flex items-center flex-row w-full h-full mx-auto gap-(--un-header-footer-space-gap) py-(--un-header-footer-space-vertical) px-(--unity-grid-margin)\",\n          className\n        )}\n      >\n        {children}\n      </Toolbar>\n    </header>\n  );\n}\n\nexport { AkHeader };\n",
+      "type": "registry:component"
+    }
+  ]
+}

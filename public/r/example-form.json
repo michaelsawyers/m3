@@ -5,8 +5,7 @@
   "title": "Example Form",
   "description": "A contact form with Zod validation.",
   "dependencies": [
-    "zod",
-    "@ariakit/react"
+    "zod"
   ],
   "registryDependencies": [
     "ak-button",

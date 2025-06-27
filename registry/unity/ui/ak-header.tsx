@@ -1,15 +1,11 @@
-import { Toolbar } from "@ariakit/react";
+import { Role, RoleProps, Toolbar } from "@ariakit/react";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-function AkHeader({
-  className,
-  children,
-  ...props
-}: React.ComponentProps<"header">) {
+function AkHeader({ className, children, ...props }: RoleProps<"header">) {
   return (
-    <header
+    <Role.header
       className={cn(
         "flex justify-center items-center w-full box-border flex-shrink-0 z-(--z-header) bg-(--un-header-footer-background-color) border-b-(length:--un-header-footer-border-width) border-solid border-(--un-header-footer-border-color) text-(--un-header-footer-color)",
         className
@@ -24,7 +20,7 @@ function AkHeader({
       >
         {children}
       </Toolbar>
-    </header>
+    </Role.header>
   );
 }
 
